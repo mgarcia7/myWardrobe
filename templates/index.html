@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Name</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+
+<form method="post" action="{{ url_for('add_outfit') }}">>
+    <!-- Date -->
+    <div class="form-group row">
+      <label for="date_outfit_worn" class="col-2 col-form-label">Date</label>
+      <div class="col-2">
+        <input class="form-control" type="date" id="date_outfit_worn">
+      </div>
+    </div>
+
+    <!-- Top --> 
+    <div class="form-group row">
+      <label for="top" class="col-2 col-form-label">Top</label>
+      <div class="clothes">
+        <input class="form-control" type="text" id="top">
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="form-group row">
+      <label for="bottom" class="col-2 col-form-label">Bottom</label>
+      <div class="clothes">
+        <input class="form-control" type="text" id="bottom">
+      </div>
+    </div>
+
+    <!-- Layer -->
+    <div class="form-group row">
+      <label for="layer" class="col-2 col-form-label">Layer</label>
+      <div class="clothes">
+        <input class="form-control" type="text"  id="layer">
+      </div>
+    </div>
+
+    <!-- Rating -->
+    <div class="form-group row">
+      <label for="rating" class="col-2 col-form-label">Rating</label>
+      <div class="col-2">
+        <input class="form-control" type="number"  id="rating">
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="form-group row">
+      <label for="notes" class="col-2 col-form-label">Notes</label>
+      <div class="col-2">
+        <input class="form-control" type="text"  id="notes">
+      </div>
+    </div>
+
+    <!-- Occasion -->
+
+    <div class="form-group row">
+      <label for="occasion">Select occasion:</label>
+      <select class="form-control" id="occasion">
+        <option>Casual</option>
+        <option>Going out</option>
+        <option>Work</option>
+      </select>
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+</body>
+</html>
